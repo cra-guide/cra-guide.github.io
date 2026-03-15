@@ -11,25 +11,25 @@ title = "Projects"
 {{< block "grid-2" >}}
 {{< column >}}
 
-# Compose your Docs with **Ease**.
+# Cyber Resilience Act
 
-Compose is a lean `Hugo` documentation theme, inspired by [forestry.io](https://web.archive.org/web/20190331052103/https://forestry.io/docs/welcome/)(now TinaCMS).
-
-Compose ships with tina cms [configuration](docs/compose/use-tina-cms/).
+This site aims to how to get started with Cyber Resilience Act compliance
+(CRA).
+The deadline is fast approaching, and we found a lack of good resources with
+concrete actionable advice on how to implement CRA.
+We are not legal/compliance experts, so following the guidance found on this
+site is no guarantee that your organization will pass any audits on the
+subject.
 
 {{< tip "warning" >}}
-Feel free to open a [PR](https://github.com/onweru/compose/pulls), raise an [issue](https://github.com/onweru/compose/issues/new/choose "Open a Github Issue")(s) or request new feature(s). {{< /tip >}}
-
-{{< tip >}}
-You can generate diagrams, flowcharts, and piecharts from text in a similar manner as markdown using [mermaid](./docs/compose/mermaid/).
-
-Or, [generate graphs, charts](docs/compose/graphs-charts-tables/#show-a-pie-doughnut--bar-chart-at-once) and tables from a csv, ~~or a json~~ file.
+The site is **work-in-progress**.
+New content will be added over time.
 {{< /tip >}}
 
-{{< button "docs/compose/" "Read the Docs" >}}{{< button "https://github.com/onweru/compose" "Download Theme" >}}
+{{< button "docs/compose/" "Read more" >}}
 {{< /column >}}
 
 {{< column >}}
-![diy](/images/scribble.jpg)
+![iot](/images/iot-devices.jpg)
 {{< /column >}}
 {{< /block >}}
