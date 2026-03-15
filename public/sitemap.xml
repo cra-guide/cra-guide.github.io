@@ -2,106 +2,130 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1080/docs/compose/</loc>
+    <loc>http://localhost:1313/docs/compose/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/tutorials/example/</loc>
+    <loc>http://localhost:1313/tutorials/example/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/docs/</loc>
+    <loc>http://localhost:1313/docs/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/tutorials/</loc>
+    <loc>http://localhost:1313/tutorials/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/docs/compose/install-theme/</loc>
+    <loc>http://localhost:1313/docs/compose/install-theme/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/docs/compose/use-tina-cms/</loc>
+    <loc>http://localhost:1313/docs/compose/use-tina-cms/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/docs/compose/organize-content/</loc>
+    <loc>http://localhost:1313/docs/compose/organize-content/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/docs/compose/shortcodes/</loc>
+    <loc>http://localhost:1313/docs/compose/shortcodes/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/docs/compose/search/</loc>
+    <loc>http://localhost:1313/docs/compose/search/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/docs/compose/shortcodes-example/</loc>
+    <loc>http://localhost:1313/docs/compose/shortcodes-example/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/docs/compose/mermaid/</loc>
+    <loc>http://localhost:1313/docs/compose/mermaid/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/tutorials/example/mermaid/</loc>
+    <loc>http://localhost:1313/tutorials/example/mermaid/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/docs/compose/graphs-charts-tables/</loc>
+    <loc>http://localhost:1313/docs/compose/graphs-charts-tables/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/docs/clarity/</loc>
+    <loc>http://localhost:1313/docs/clarity/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/docs/compose/customize/</loc>
+    <loc>http://localhost:1313/docs/compose/customize/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/docs/clarity/getting-started/</loc>
+    <loc>http://localhost:1313/docs/clarity/getting-started/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/docs/compose/github-actions/</loc>
+    <loc>http://localhost:1313/docs/compose/github-actions/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/docs/clarity/features/</loc>
+    <loc>http://localhost:1313/docs/clarity/features/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/docs/clarity/customize/</loc>
+    <loc>http://localhost:1313/docs/clarity/customize/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/docs/clarity/images/</loc>
+    <loc>http://localhost:1313/docs/clarity/images/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/docs/clarity/blogging/</loc>
+    <loc>http://localhost:1313/docs/clarity/blogging/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/docs/clarity/syntax-highlighting/</loc>
+    <loc>http://localhost:1313/docs/clarity/syntax-highlighting/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/docs/clarity/theme-overrides/</loc>
+    <loc>http://localhost:1313/docs/clarity/theme-overrides/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/blog/</loc>
-    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/tags/emoji/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/</loc>
-    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/blog/emoji-support/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/tags/emoji/</loc>
-    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/blog/emoji-support/</loc>
-    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/blog/creating-a-new-theme/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/tags/</loc>
-    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/blog/goisforlovers/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/blog/creating-a-new-theme/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/blog/goisforlovers/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/categories/development/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/categories/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/tags/development/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/categories/development/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/blog/hugoisforlovers/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/tags/development/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/tags/go/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/blog/hugoisforlovers/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/categories/golang/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/tags/go/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/tags/golang/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/categories/golang/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/tags/hugo/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/tags/golang/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/tags/templates/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/tags/hugo/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/tags/themes/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/tags/templates/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/blog/migrate-from-jekyll/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/tags/themes/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/blog/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/blog/migrate-from-jekyll/</loc>
-    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1080/search/</loc>
+    <loc>http://localhost:1313/search/</loc>
+    <lastmod>2026-03-15T16:42:16+01:00</lastmod>
   </url>
 </urlset>
