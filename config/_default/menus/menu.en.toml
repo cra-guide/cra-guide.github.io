@@ -9,11 +9,11 @@ weight = 2
 url = "docs/"
 
 [[main]]
-name = "Tutorials"
+name = "Cases"
 weight = 2
-url = "tutorials/"
+url = "cases/"
 
 [[main]]
-name = "Example"
+name = "EA Viden"
 weight = 3
-url = "https://composedocs.netlify.app"
+url = "https://www.eaviden.dk/project/implementering-af-cyber-resilience-act-i-smver/"
