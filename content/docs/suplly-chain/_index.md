@@ -5,6 +5,9 @@ weight = 10
 
 <!-- TODO check that this is actually in line with CRA -->
 
+> We have deliberately limited this section to only be concerned with software
+> supply chain security.
+
 # Introduction
 
 Manufactures of products with digital elements (aka products with software)
@@ -55,3 +58,47 @@ These are just some of the stories.
 - [3CX attack (SmoothOperator) - 2023](https://www.bleepingcomputer.com/news/security/hackers-compromise-3cx-desktop-app-in-a-supply-chain-attack/)
 - [XZ Utils backdoor - 2024](https://en.wikipedia.org/wiki/XZ_Utils_backdoor)
 - [LiteLLM PyPI backdoor - 2026](https://www.bleepingcomputer.com/news/security/popular-litellm-pypi-package-compromised-in-teampcp-supply-chain-attack/)
+
+[OPEN SOURCE MALWARE - Community Threat
+Database](https://opensourcemalware.com/) is a community effort to track
+malware spreading through open source packages.
+
+# Security controls
+
+## Development
+
+1. Provide security training
+   - Provide adequate security training to developers
+   - Foster a security focused company culture
+2. Threat Modeling
+3. Use Version control system (VCS)
+   - Git has become the de facto
+   - Use branch protection
+   - Require code review before merging pull-requests
+4. Secure development environment
+5. Dedicated build system
+   - Use a dedicated build system separate from developer machines.
+   - Sign builds.
+   - Enforce only source code and signing keys as input to build system.
+   - Use ephemeral build environment where possible.
+6. Dependencies scanning (SCA)
+7. Security testing (SAST, DAST, PenTest)
+
+## Operation
+
+1. Enforce network segmentation
+2. Service isolation with VMs or containers
+3. Web Application Firewall
+4. Secret management - HashiCorp Vault, AWS Secrets Manager etc.
+5. SIEM, XDR and SOAR
+6. Infrastructure as Code (IaC) - Terraform, CloudFormation etc
+
+# Maturing supply chain security
+
+To further mature the security guarantees of your software supply chain, we like
+to point you towards [SLSA](https://slsa.dev/) project.
+It is a staged specification that can be followed for a milestone based of
+security best practices in software supply chain.
+It is made up of a source and a build track.
+Each track is divided into several levels.
+Where each level provides increased guarantees.
