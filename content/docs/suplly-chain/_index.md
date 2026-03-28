@@ -1,5 +1,5 @@
 +++
-Title = "Securing the supply chain"
+title = "Securing the supply chain"
 weight = 10
 +++
 

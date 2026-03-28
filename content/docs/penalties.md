@@ -1,5 +1,5 @@
 +++
-Title = "Penalties"
+title = "Penalties"
 weight = 2
 +++
 
