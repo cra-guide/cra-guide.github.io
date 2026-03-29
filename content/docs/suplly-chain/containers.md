@@ -100,3 +100,31 @@ other common tools.
 Using a distroless base image for the final container image, severely limits an
 attackers' ability to do [lateral
 movement](https://www.cloudflare.com/learning/security/glossary/what-is-lateral-movement/).
+
+## Attestation
+
+TODO verify signature of image. Cosign + docker scout
+
+## Scanning
+
+TODO Trivy
+
+# Runtime hardning
+
+## None-root user
+
+## Availability
+
+TODO healthcheck
+
+## Secrets
+
+TODO dotfiles for docker compose. Mount secrets
+
+## Seccomp
+
+TODO
+
+## AppArmor
+
+TODO
