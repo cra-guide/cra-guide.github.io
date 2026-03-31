@@ -65,6 +65,11 @@ malware spreading through open source packages.
 
 # Security controls
 
+Security controls are measures or safeguards that can be used to avoid or
+minimize attacks.
+We have divided these into two categories.
+Some of them will be explored in further detail.
+
 ## Development
 
 1. Provide security training
