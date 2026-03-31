@@ -107,7 +107,28 @@ TODO verify signature of image. Cosign + docker scout
 
 ## Scanning
 
-TODO Trivy
+There are a number of tools that can do vulnerability scanning for containers.
+Two options we've come a cross a lot are:
+[Trivy](https://github.com/aquasecurity/trivy) and
+[Snyk](https://docs.snyk.io/developer-tools/snyk-ci-cd-integrations/github-actions-for-snyk-setup-and-checking-for-vulnerabilities/snyk-docker-action).
+
+There are other tools/vendors that act in this area.
+And of course they vary in the capabilities, it is advisable to do some
+research.
+Some of the features container scanning tools might provide is:
+
+- Scan image for known vulnerability
+- Detect some misconfiguration
+- Find secrets baked into images
+- Software license compliance
+
+Trivy is an open source container image scanner with all the aforementioned
+capabilities.
+It might be a good place to start to get familiar with these kinds of tools.
+Though it is worth noting that [Trivy has been involved in a couple of security
+incidents](https://thehackernews.com/2026/03/trivy-security-scanner-github-actions.html).
+
+See also [Security Testing](security-testing.md).
 
 # Runtime hardning
 
