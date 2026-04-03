@@ -57,6 +57,7 @@ These are just some of the stories.
 - [Log4SHell - 2021](https://en.wikipedia.org/wiki/Log4Shell)
 - [3CX attack (SmoothOperator) - 2023](https://www.bleepingcomputer.com/news/security/hackers-compromise-3cx-desktop-app-in-a-supply-chain-attack/)
 - [XZ Utils backdoor - 2024](https://en.wikipedia.org/wiki/XZ_Utils_backdoor)
+- [npm debug and chalk compromise - 2025](https://www.aikido.dev/blog/npm-debug-and-chalk-packages-compromised)
 - [LiteLLM PyPI backdoor - 2026](https://www.bleepingcomputer.com/news/security/popular-litellm-pypi-package-compromised-in-teampcp-supply-chain-attack/)
 - [Axios malware - 2026](https://www.bleepingcomputer.com/news/security/hackers-compromise-axios-npm-package-to-drop-cross-platform-malware/)
 
