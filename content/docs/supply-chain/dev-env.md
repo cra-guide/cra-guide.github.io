@@ -6,11 +6,12 @@ Either by running regular audits with designated package manager.
 Or using something like
 [Dependabot](https://docs.github.com/en/code-security/tutorials/secure-your-dependencies/dependabot-quickstart-guide).
 
-However, given the [recent explosion in malicious packages](https://opensourcemalware.com/blog).
-Then each dependency should be treated as dangerous.
+Given the [growing malware
+trend](https://www.endorlabs.com/learn/npm-account-takeovers-are-a-growing-malware-trend)
+packages on npm and other registries, it is time we start treating them as
+dangerous.
 Developers are the target for much of this.
-It is therefore becoming a necessity to use isolated, ephemeral (sandboxed)
-development environments.
+It is therefore becoming to use sandboxed development environments.
 One solution is to use cloud development environments (CDE), such as: [GitHub
 Codespaces](https://github.com/features/codespaces), [Google Cloud
 Workstations](https://cloud.google.com/workstations) and [AWS
