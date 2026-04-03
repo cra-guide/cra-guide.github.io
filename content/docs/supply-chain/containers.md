@@ -8,7 +8,8 @@ title = "Containers"
 
 # Technology
 
-<!-- TODO is this too opinionated? -->
+> We are only going to consider Linux containers on this page, primarily
+> focusing on Docker, since it is the industry standard these days.
 
 To understand how to secure something you need to understand a bit about the
 technology.
@@ -16,11 +17,6 @@ technology.
 Containers are often explained as a form of light-weight virtual machine (VM).
 While this explanation is good enough for an initial understanding (assuming
 prior knowledge of virtualization), it is not the full story.
-
-> We are going to ignore Windows containers here.
-> I know it is a thing, but have yet encounter it in the wild.
-> Regardless, Windows containers are fundamentally different on a
-> technological level.
 
 ## Cgroups & namespaces
 
@@ -32,8 +28,16 @@ The short version is that namespaces provide isolation for processes and
 cgroups allows limiting of resources.
 So all containers are, is just regular processes (or process trees) with
 isolation and resource control.
-Therefore, instead of thinking about containers as "light-weight VMs" it is
-probably more useful (in a security context) to think of them as sandboxes.
+Therefore, instead of thinking about containers as "light-weight VMs", it is
+more useful in a security context to think of them as sandboxes.
+
+Great care should be taking when deploying containers with something like
+Docker Engine, as it is very easy to misconfigure.
+Docker is not really secure by default.
+Even with all the appropriate security measures, isolation is not as strong as
+VMs.
+In fact some cloud providers (AWS & Fly) "secretly" deploy containers to micro
+VMs using [Firecracker](https://github.com/firecracker-microvm/firecracker).
 
 ## Images
 
@@ -108,13 +112,16 @@ TODO verify signature of image. Cosign + docker scout
 ## Scanning
 
 There are a number of tools that can do vulnerability scanning for containers.
-Two options we've come a cross a lot are:
-[Trivy](https://github.com/aquasecurity/trivy) and
+The official solution for Docker is [Docker
+Scout](https://docs.docker.com/scout/) (requires subscription).
+Two other options we've come a cross a lot are:
+[Trivy](https://github.com/aquasecurity/trivy),
+[Grype](https://github.com/anchore/grype) and
 [Snyk](https://docs.snyk.io/developer-tools/snyk-ci-cd-integrations/github-actions-for-snyk-setup-and-checking-for-vulnerabilities/snyk-docker-action).
 
-There are other tools/vendors that act in this area.
-And of course they vary in the capabilities, it is advisable to do some
-research.
+There are many other tools/vendors that act in this area. They vary in the
+capabilities.
+So it is advisable to do some research.
 Some of the features container scanning tools might provide is:
 
 - Scan image for known vulnerability
@@ -130,9 +137,24 @@ incidents](https://thehackernews.com/2026/03/trivy-security-scanner-github-actio
 
 See also [Security Testing](security-testing.md).
 
-# Runtime hardning
+# Runtime hardening
 
-## None-root user
+## Non-root user
+
+By default, Docker run commands inside containers as root.
+It is therefore advisable to specify another user when running containers.
+There are a couple of different ways this can be done.
+
+1. When running a container, you can specify a UID with `-u` options.
+   Example: `docker run -u 4000 alpine`.
+2. When writing a Dockerfile, a non-root should be specified with the [USER
+   instruction](https://docs.docker.com/reference/dockerfile/#user).
+3. By enabling [User namespace
+   remapping](https://docs.docker.com/engine/security/userns-remap/#enable-userns-remap-on-the-daemon)
+   on Docker daemon.
+4. By enabling [Enhanced Container
+   Isolation](https://docs.docker.com/enterprise/security/hardened-desktop/enhanced-container-isolation/)
+   (requires subscription).
 
 ## Availability
 
@@ -190,12 +212,35 @@ new attack vectors open and break regulatory compliance such as GDPR.
 
 ## Secrets
 
-TODO dotfiles for docker compose. Mount secrets
+It is important to be aware that any secrets set with `ENV` or `ARG` in a
+Dockerfile will persist in the final image.
+So setting secrets that way is strongly discouraged.
 
-## Seccomp
+Using secrets with Docker is done via mounts.
+See [Build secrets](https://docs.docker.com/build/building/secrets/) and
+[Secrets in Compose](https://docs.docker.com/compose/how-tos/use-secrets/).
 
-TODO
+Use a scanning tool to check for secrets in your images.
+See [Scanning](#scanning).
 
-## AppArmor
+Cloud providers generally provide their own way of managing secrets for
+containers.
+See the documentation for your provider for details.
 
-TODO
+## Secure Computing (seccomp)
+
+Docker integrates with seccomp, which is a feature of the Linux kernel,
+restricting which system calls can be made by a process/container.
+See [Seccomp security profiles for
+Docker](https://docs.docker.com/engine/security/seccomp/).
+
+## Further reading
+
+Be sure carefully read the official
+[dockerdocs](https://docs.docker.com/manuals/) as security advice is scattered
+throughout.
+Pay special attention to the [Docker Engine
+Security](https://docs.docker.com/engine/security/) section.
+
+We also recommend reading [OWASP Docker Security Cheat
+Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html).
