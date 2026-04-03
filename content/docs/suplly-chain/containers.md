@@ -136,7 +136,57 @@ See also [Security Testing](security-testing.md).
 
 ## Availability
 
-TODO healthcheck
+Availability is an important security goal.
+In addition to preventing access to unauthorized users, it is just as important
+that authorized users can access the service.
+
+For any long-lived process, there is a chance that at some point, it will
+become unresponsive.
+The first step for solving this issue for containers, is to be able to detect
+that a container has become "unhealthy".
+Unhealthy - meaning that the container has stopped responding to requests.
+This is done with healthcheck/liveness probes.
+The common strategy for dealing with these issues, is simply to restart the
+container when it stops responding.
+
+How health check/liveness probes are declared, depends a bit on how you run the
+container.
+
+For **Docker**, it is called healthcheck.
+And there are two ways to declare such a check.
+Either with the [HEALTHCHECK
+instruction](https://docs.docker.com/reference/dockerfile/#healthcheck) in
+Dockerfile.
+Or with the [healthcheck
+attribute](https://docs.docker.com/reference/compose-file/services/#healthcheck)
+in Compose file.
+
+It is important that you carefully consider how to implement the health check,
+as you don't want it to become an attack vector. Healthchecks in Docker runs a
+command (often `curl`) inside the container. Including `curl`, `nc` etc. in
+your service container image, also provides a tool that can be abused by
+attackers.
+
+For **Kubernetes**, use the [liveness
+command](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/).
+
+## Monitoring
+
+There are a plethora of monitoring services such as:
+[Middleware](https://middleware.io/product/container-monitoring/),
+[sematext](https://sematext.com/), [datadog](https://www.datadoghq.com/),
+[Splunk](https://www.splunk.com/) etc.
+However, these can be pricey.
+
+For a self-hosted monitoring solution, you can use
+[Prometheus](https://prometheus.io/) plus either
+[Grafana](https://grafana.com/) or [Perses](https://perses.dev/).
+
+Support for observability beyond simple healthcheck probes can be added by
+implementing [OpenTelemetry standard](https://opentelemetry.io/).
+It is important though, that you very carefully read the [documentation on
+security](https://opentelemetry.io/docs/security/), as it can otherwise leave
+new attack vectors open and break regulatory compliance such as GDPR.
 
 ## Secrets
 
