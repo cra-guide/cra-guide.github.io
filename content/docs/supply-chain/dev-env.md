@@ -38,5 +38,10 @@ before merging into the main branch.
 On GitHub, we recommend using [fine-grained personal access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#fine-grained-personal-access-tokens).
 The [principle of least
 privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege) should
-be followed when creating tokens. They should be scoped to only the necessary
-repository.
+be followed when creating tokens.
+They should be scoped to only the necessary repository.
+In addition, tokens can be created with a short expiration, though that can
+create some inconvenience.
+
+Developers should not be allowed to publish artifacts themselves.
+This should only be allowed from a protected CI/CD environment.
