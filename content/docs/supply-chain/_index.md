@@ -58,6 +58,7 @@ These are just some of the stories.
 - [3CX attack (SmoothOperator) - 2023](https://www.bleepingcomputer.com/news/security/hackers-compromise-3cx-desktop-app-in-a-supply-chain-attack/)
 - [XZ Utils backdoor - 2024](https://en.wikipedia.org/wiki/XZ_Utils_backdoor)
 - [LiteLLM PyPI backdoor - 2026](https://www.bleepingcomputer.com/news/security/popular-litellm-pypi-package-compromised-in-teampcp-supply-chain-attack/)
+- [Axios malware - 2026](https://www.bleepingcomputer.com/news/security/hackers-compromise-axios-npm-package-to-drop-cross-platform-malware/)
 
 [OPEN SOURCE MALWARE - Community Threat
 Database](https://opensourcemalware.com/) is a community effort to track
@@ -80,7 +81,7 @@ Some of them will be explored in further detail.
    - Git has become the de facto
    - Use branch protection
    - Require code review before merging pull-requests
-4. Secure development environment
+4. [Secure development environment](dev-env.md)
 5. Dedicated build system
    - Use a dedicated build system separate from developer machines.
    - Sign builds.
