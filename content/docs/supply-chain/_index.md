@@ -94,7 +94,7 @@ Some of them will be explored in further detail.
 1. Provide security training
    - Provide adequate security training to developers
    - Foster a security focused company culture
-2. Threat Modeling
+2. [Threat Modeling](https://owasp.org/www-community/Threat_Modeling_Process)
 3. Use Version control system (VCS)
    - Git has become the de facto
    - Use branch protection
