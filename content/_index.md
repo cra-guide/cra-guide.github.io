@@ -13,10 +13,11 @@ title = "Projects"
 
 # Cyber Resilience Act
 
-This site aims to how to get started with Cyber Resilience Act compliance
-(CRA).
+This site aims to explain how to get started with Cyber Resilience Act (CRA)
+compliance.
 The deadline is fast approaching, and we found a lack of good resources with
 concrete actionable advice on how to implement CRA.
+This site focus more on the technical side of things.
 We are not legal/compliance experts, so following the guidance found on this
 site is no guarantee that your organization will pass any audits on the
 subject.
