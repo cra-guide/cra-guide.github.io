@@ -10,18 +10,16 @@ weight = 10
 
 # Introduction
 
-Manufactures of products with digital elements (aka products with software)
-needs to follow due diligence when it comes to components in its supply chain.
-
+Manufactures of products with digital elements (products with software) needs
+to follow due diligence when it comes to components in its supply chain.
 It is a concrete requirement that manufactures maintain a <abbr title="Software
 Bill of Material">SBOM</abbr>.
 
-Products must not be put on the marked if they include known vulnerabilities.
-We've interpreted that this requirement extends to the components used on the
-software.
-
-In this context components refer modules, libraries etc. that are included as
-part of the software.
+Products must not be put on the marked if they include known exploitable
+vulnerabilities.
+This requirement extends to the components used on the software.
+In this context components refer modules, libraries and frameworks that are
+included as part of the software.
 It includes everything you get from package repositories such as
 [NPM](https://www.npmjs.com/), [PyPI](https://pypi.org/),
 [NuGet](https://www.nuget.org/) etc.
@@ -31,6 +29,26 @@ Meaning we don't re-invent the wheel for every single thing.
 We use frameworks, plugins and libraries which inherently because part of our
 product.
 Therefore, we need due diligence when it comes to those components.
+
+Manufactures must provide security updates free of charge for the lifetime of
+the product.
+Which is at least 5 years, or however long a product of a given category can
+reasonably be expected to last.
+These updates should, where applicable, be installed automatically.
+Security updates should be delivered separate from feature updates/changes.
+There should be a clear opt-out mechanism for automatic updates.
+
+Manufactures must insure an appropriate level of security, taking well
+established security principles into account such as: [secure by
+design](https://en.wikipedia.org/wiki/Secure_by_design), [secure by
+default](https://top10proactive.owasp.org/the-top-10/c5-secure-by-default/),
+minimize [attack
+surface](https://cheatsheetseries.owasp.org/cheatsheets/Attack_Surface_Analysis_Cheat_Sheet.html).
+
+Regarding the data being processed and stored, the principle of [data minimization](https://en.wikipedia.org/wiki/Data_minimization) must apply.
+Also, [confidentiality, integrity and
+availability](https://en.wikipedia.org/wiki/Information_security#CIA_triad) of
+the data must be protected.
 
 # Supply threats
 
@@ -47,7 +65,6 @@ Hulud](https://www.bleepingcomputer.com/news/security/shai-hulud-malware-infects
 2.0](https://www.bleepingcomputer.com/news/security/shai-hulud-20-npm-malware-attack-exposed-up-to-400-000-dev-secrets/)
 and
 [Glassworm](https://www.bleepingcomputer.com/news/security/glassworm-malware-hits-400-plus-code-repos-on-github-npm-vscode-openvsx/).
-
 Besides these worms, we've seen a number of prominent supply chain attacks in recent years.
 These are just some of the stories.
 
