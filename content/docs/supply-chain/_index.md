@@ -7,6 +7,8 @@ weight = 10
 
 > We have deliberately limited this section to only be concerned with software
 > supply chain security.
+> Information on physical components and materials should be sought after
+> elsewhere.
 
 # Introduction
 
@@ -121,8 +123,8 @@ Some of them will be explored in further detail.
 
 To further mature the security guarantees of your software supply chain, we like
 to point you towards [SLSA](https://slsa.dev/) project.
-It is a staged specification that can be followed for a milestone based of
-security best practices in software supply chain.
+It is a specification that can be followed for a milestone based of security
+best practices in software supply chain.
 It is made up of a source and a build track.
 Each track is divided into several levels.
-Where each level provides increased guarantees.
+Where higher levels provides increased guarantees.
