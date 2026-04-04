@@ -1,17 +1,19 @@
-# Software Bill of Materials
++++
+title = "Software Bill of Materials"
++++
 
-## CycloneDX vs SPDX
+# CycloneDX vs SPDX
 
 TODO
 
-## Containers
+# Containers
 
 TODO Syft + Grype
 
-## Yocto
+# Yocto
 
 TODO how to gen SBOM
 
-## Dependency-track
+# Dependency-track
 
 TODO

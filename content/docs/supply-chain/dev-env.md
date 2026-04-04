@@ -1,4 +1,6 @@
-# Secure Development Environment
++++
+title = "Development Environment"
++++
 
 The main advice regarding security of supply chain have long been to keep
 dependencies up to date.
@@ -21,7 +23,7 @@ Another is to run your own virtual machine for development.
 Using isolated development environments are also necessary safety precaution
 for agentic coding.
 
-## Custom virtual machine
+# Custom virtual machine
 
 Using custom virtual machines for development environments is an option for
 organizations that already have the necessary infrastructure, and want tight
@@ -30,7 +32,7 @@ control of costs.
 Our recommendation is that the organization create a VM template per
 tech-stack.
 
-## Access tokens
+# Access tokens
 
 You need to be able to push commits from your sandboxed development environment.
 We recommend setting up branch protection to force review of all code changes
