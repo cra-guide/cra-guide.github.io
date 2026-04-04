@@ -36,8 +36,9 @@ Docker Engine, as it is very easy to misconfigure.
 Docker is not really secure by default.
 Even with all the appropriate security measures, isolation is not as strong as
 VMs.
-In fact some cloud providers (AWS & Fly) "secretly" deploy containers to micro
-VMs using [Firecracker](https://github.com/firecracker-microvm/firecracker).
+In fact some cloud providers (AWS & Fly) "secretly" deploy containers to
+micro-VMs using
+[Firecracker](https://github.com/firecracker-microvm/firecracker).
 
 ## Images
 
@@ -107,7 +108,26 @@ movement](https://www.cloudflare.com/learning/security/glossary/what-is-lateral-
 
 ## Attestation
 
-TODO verify signature of image. Cosign + docker scout
+Attestation provides proof of how an image was built and what's in it.
+Adding attestation as part of the image build process, allows verification that
+the images is what is claimed and haven't been tampered when deployed.
+
+There are two types of attestation.
+
+1. **Provenance attestation** record facts about the build process such as,
+   when the image was built and how it was produced.
+   [Read more](https://docs.docker.com/build/metadata/attestations/slsa-provenance/)
+
+2. **SBOM attestation** contains a list of software components/artifacts inside
+   the container.
+   An SBOM can be used to scan for known vulnerabilities.
+   [Read more](https://docs.docker.com/build/metadata/attestations/sbom/)
+
+The authenticity and integrity of images and attestation can be proved with
+[signatures](https://docs.docker.com/dhi/core-concepts/signatures/).
+
+Images should be built with attestation and signed using
+[cosign](https://docs.sigstore.dev/) in as part of CI pipeline.
 
 ## Scanning
 
@@ -234,7 +254,22 @@ restricting which system calls can be made by a process/container.
 See [Seccomp security profiles for
 Docker](https://docs.docker.com/engine/security/seccomp/).
 
-## Further reading
+## Alternative container runtime
+
+By default, Docker uses containerd which uses runc as container runtime.
+It uses the standard Linux features of cgroups and namespaces to facilitate
+containers.
+
+Depending on deployment scenario it can be beneficial to change the default
+runtime to provide additional isolation for containers.
+Some alternatives are: [kata](https://katacontainers.io/),
+[gvisor](https://github.com/google/gvisor) and
+[krun](https://github.com/containers/libkrun).
+
+See [Alternative container
+runtimes](https://docs.docker.com/engine/daemon/alternative-runtimes).
+
+# Further reading
 
 Be sure carefully read the official
 [dockerdocs](https://docs.docker.com/manuals/) as security advice is scattered
