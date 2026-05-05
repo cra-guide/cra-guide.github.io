@@ -1,6 +1,6 @@
 +++
 title = "Securing the supply chain"
-weight = 10
+weight = 20
 +++
 
 <!-- TODO check that this is actually in line with CRA -->
@@ -14,43 +14,33 @@ weight = 10
 
 Manufactures of products with digital elements (products with software) needs
 to follow due diligence when it comes to components in its supply chain.
-It is a concrete requirement that manufactures maintain a <abbr title="Software
-Bill of Material">SBOM</abbr>.
+
+It is a concrete requirement that manufactures maintain a [SBOM (Software Bill
+of Material)](sbom).
 
 Products must not be put on the marked if they include known exploitable
 vulnerabilities.
 This requirement extends to the components used on the software.
-In this context components refer modules, libraries and frameworks that are
-included as part of the software.
+In this context components refer modules, libraries and frameworks etc. that
+are included as part of the software.
 It includes everything you get from package repositories such as
 [NPM](https://www.npmjs.com/), [PyPI](https://pypi.org/),
 [NuGet](https://www.nuget.org/) etc.
 This is important because most (if not all) software these days are build on
 the shoulder of giants.
 Meaning we don't re-invent the wheel for every single thing.
-We use frameworks, plugins and libraries which inherently because part of our
+We use frameworks, plugins and libraries which inherently become part of our
 product.
-Therefore, we need due diligence when it comes to those components.
+We therefore need due diligence when it comes to selecting and maintaining
+those components.
 
 Manufactures must provide security updates free of charge for the lifetime of
 the product.
 Which is at least 5 years, or however long a product of a given category can
 reasonably be expected to last.
-These updates should, where applicable, be installed automatically.
+These updates should (where applicable) be installed automatically.
 Security updates should be delivered separate from feature updates/changes.
-There should be a clear opt-out mechanism for automatic updates.
-
-Manufactures must insure an appropriate level of security, taking well
-established security principles into account such as: [secure by
-design](https://en.wikipedia.org/wiki/Secure_by_design), [secure by
-default](https://top10proactive.owasp.org/the-top-10/c5-secure-by-default/),
-minimize [attack
-surface](https://cheatsheetseries.owasp.org/cheatsheets/Attack_Surface_Analysis_Cheat_Sheet.html).
-
-Regarding the data being processed and stored, the principle of [data minimization](https://en.wikipedia.org/wiki/Data_minimization) must apply.
-Also, [confidentiality, integrity and
-availability](https://en.wikipedia.org/wiki/Information_security#CIA_triad) of
-the data must be protected.
+And there should be a clear opt-out mechanism for automatic updates.
 
 # Supply threats
 
@@ -73,7 +63,7 @@ These are just some of the stories.
 - [SolarWinds Compromise (SUNBURST) - 2020](https://www.breachsense.com/blog/solarwinds-data-breach-case-study/)
 - [CodeCov Bash Uploader Compromise - 2021](https://www.securityweek.com/codecov-bash-uploader-dev-tool-compromised-supply-chain-hack/)
 - [Kasya VSA ransomware (REvil) - 2021](https://cybernews.com/security/kaseya-ransomware-attack-heres-what-you-need-to-know/)
-- [Log4SHell - 2021](https://en.wikipedia.org/wiki/Log4Shell)
+- [Log4Shell - 2021](https://en.wikipedia.org/wiki/Log4Shell)
 - [3CX attack (SmoothOperator) - 2023](https://www.bleepingcomputer.com/news/security/hackers-compromise-3cx-desktop-app-in-a-supply-chain-attack/)
 - [XZ Utils backdoor - 2024](https://en.wikipedia.org/wiki/XZ_Utils_backdoor)
 - [npm debug and chalk compromise - 2025](https://www.aikido.dev/blog/npm-debug-and-chalk-packages-compromised)
