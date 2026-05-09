@@ -48,3 +48,7 @@ because as said, we solely focus on manufactures here.
 
 If you are a manufacture and include open source components in your products,
 then you become responsible for baseline security of those components.
+
+The CRA legislation suggest the development of harmonized standards which can
+streamline and unify manufacture conformity.
+However, as of writing, such harmonized standards haven't been published yet.
