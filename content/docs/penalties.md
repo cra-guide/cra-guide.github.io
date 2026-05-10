@@ -1,6 +1,6 @@
 +++
 title = "Penalties"
-weight = 2
+weight = 4
 +++
 
 TODO summarize Article 64.
