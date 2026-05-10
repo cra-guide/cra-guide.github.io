@@ -35,6 +35,11 @@ Manufacture is defined as:
 > manufactured, and markets them under its name or trademark, whether for
 > payment, monetisation or free of charge.
 
+See [Article 13 - Obligations of
+manufacturers](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_13)
+
+Obligations of manufacturers
+
 Early proposals of the legislation was heavy criticized by the free and open
 source community.
 Which lead to free and open source mostly being exempted from obligations in
