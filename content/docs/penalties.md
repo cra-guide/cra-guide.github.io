@@ -1,6 +1,6 @@
 +++
 title = "Penalties"
-weight = 4
+weight = 2
 +++
 
 Before Cyber Resilience Act many manufactures have little incentive to

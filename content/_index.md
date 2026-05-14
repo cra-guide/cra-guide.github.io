@@ -27,7 +27,7 @@ The site is **work-in-progress**.
 New content will be added over time.
 {{< /tip >}}
 
-{{< button "docs/compose/" "Read more" >}}
+{{< button "docs/overview" "Read more" >}}
 {{< /column >}}
 
 {{< column >}}

@@ -1,5 +1,5 @@
 +++
-title = "Gap Analysis"
+title = "Gap analysis"
 weight = 3
 +++
 

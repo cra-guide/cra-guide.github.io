@@ -60,7 +60,7 @@ compliant with CRA.
 
 1. Identify what products have digital elements (software)
 2. Determine what category each product falls into (see
-   [categories](./categories.md)), because that determines how assessment
+   [categories](./product-categories.md)), because that determines how assessment
 should be done.
 3. Conduct a gap analysis (see [gap analysis](./gap-analysis.md))
     - What standards are already implemented, and what are the gap between that
@@ -77,6 +77,7 @@ should be done.
 5. During development
     - Consider security as integral part of design.
     - Implement appropriate security controls.
+    - Conduct regular security testing (see [security testing](./supply-chain/security-testing.md))
     - Configure CI/CD pipeline to generate SBOM (see [SBOM](./supply-chain/sbom.md)).
     - Daily scan SBOM of all released versions against databases of known
     vulnerabilities such as [CVE](https://www.cve.org/),
