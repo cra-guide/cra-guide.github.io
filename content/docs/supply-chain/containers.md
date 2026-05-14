@@ -6,7 +6,7 @@ title = "Containers"
 > project, were looking into using containers to provide a way to host backend
 > for their devices on premise.
 
-# Technology
+## Technology
 
 > We are only going to consider Linux containers on this page, primarily
 > focusing on Docker, since it is the industry standard these days.
@@ -18,7 +18,7 @@ Containers are often explained as a form of light-weight virtual machine (VM).
 While this explanation is good enough for an initial understanding (assuming
 prior knowledge of virtualization), it is not the full story.
 
-## Cgroups & namespaces
+### Cgroups & namespaces
 
 What containers really are, is a combination of two features of the Linux
 kernel.
@@ -40,7 +40,7 @@ In fact some cloud providers (AWS & Fly) "secretly" deploy containers to
 micro-VMs using
 [Firecracker](https://github.com/firecracker-microvm/firecracker).
 
-## Images
+### Images
 
 Containers are commonly distributed as [OCI](https://opencontainers.org/)
 compliant containers images.
@@ -75,9 +75,9 @@ as small as possible in case a container gets compromised.
 Care should be taken not to leak secrets by accidentally baking them into
 container images.
 
-# Harden containers
+## Harden containers
 
-## Base image
+### Base image
 
 Using something familiar (Ubuntu, Debian etc) as base image for containers is
 tempting.
@@ -106,7 +106,7 @@ Using a distroless base image for the final container image, severely limits an
 attackers' ability to do [lateral
 movement](https://www.cloudflare.com/learning/security/glossary/what-is-lateral-movement/).
 
-## Attestation
+### Attestation
 
 Attestation provides proof of how an image was built and what's in it.
 Adding attestation as part of the image build process, allows verification that
@@ -129,7 +129,7 @@ The authenticity and integrity of images and attestation can be proved with
 Images should be built with attestation and signed using
 [cosign](https://docs.sigstore.dev/) in as part of CI pipeline.
 
-## Scanning
+### Scanning
 
 There are a number of tools that can do vulnerability scanning for containers.
 The official solution for Docker is [Docker
@@ -157,9 +157,9 @@ incidents](https://thehackernews.com/2026/03/trivy-security-scanner-github-actio
 
 See also [Security Testing](security-testing.md).
 
-# Runtime hardening
+## Runtime hardening
 
-## Non-root user
+### Non-root user
 
 By default, Docker run commands inside containers as root.
 It is therefore advisable to specify another user when running containers.
@@ -176,7 +176,7 @@ There are a couple of different ways this can be done.
    Isolation](https://docs.docker.com/enterprise/security/hardened-desktop/enhanced-container-isolation/)
    (requires subscription).
 
-## Availability
+### Availability
 
 Availability is an important security goal.
 In addition to preventing access to unauthorized users, it is just as important
@@ -212,7 +212,7 @@ attackers.
 For **Kubernetes**, use the [liveness
 command](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/).
 
-## Monitoring
+### Monitoring
 
 There are a plethora of monitoring services such as:
 [Middleware](https://middleware.io/product/container-monitoring/),
@@ -230,7 +230,7 @@ It is important though, that you very carefully read the [documentation on
 security](https://opentelemetry.io/docs/security/), as it can otherwise leave
 new attack vectors open and break regulatory compliance such as GDPR.
 
-## Secrets
+### Secrets
 
 It is important to be aware that any secrets set with `ENV` or `ARG` in a
 Dockerfile will persist in the final image.
@@ -247,14 +247,14 @@ Cloud providers generally provide their own way of managing secrets for
 containers.
 See the documentation for your provider for details.
 
-## Secure Computing (seccomp)
+### Secure Computing (seccomp)
 
 Docker integrates with seccomp, which is a feature of the Linux kernel,
 restricting which system calls can be made by a process/container.
 See [Seccomp security profiles for
 Docker](https://docs.docker.com/engine/security/seccomp/).
 
-## Alternative container runtime
+### Alternative container runtime
 
 By default, Docker uses containerd which uses runc as container runtime.
 It uses the standard Linux features of cgroups and namespaces to facilitate
@@ -269,7 +269,7 @@ Some alternatives are: [kata](https://katacontainers.io/),
 See [Alternative container
 runtimes](https://docs.docker.com/engine/daemon/alternative-runtimes).
 
-# Further reading
+## Further reading
 
 Be sure carefully read the official
 [dockerdocs](https://docs.docker.com/manuals/) as security advice is scattered

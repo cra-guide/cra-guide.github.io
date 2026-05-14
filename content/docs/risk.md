@@ -3,7 +3,7 @@ title = "Risk assessment"
 weight = 3
 +++
 
-# Introduction
+## Introduction
 
 Manufactures must perform a risk assessment as described in [Article
 13](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_13)
@@ -22,7 +22,7 @@ Note that other legislation (such as [NIS 2
 ](https://eur-lex.europa.eu/eli/dir/2022/2555/oj/eng)) might impose additional
 requirements to risk assessment for some product types.
 
-# Risk assessment primer
+## Risk assessment primer
 
 Risk is the possibility that something unwanted or harmful might happen.
 
@@ -58,7 +58,7 @@ the formula to:
 
 _Risk = Threat × Vulnerability × Impact_
 
-# Threat modeling
+## Threat modeling
 
 Threat modeling should be performed as part of the risk assessment.
 Threat modeling is a structured approach to discover threats to a system.

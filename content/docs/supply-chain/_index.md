@@ -10,7 +10,7 @@ weight = 20
 > Information on physical components and materials should be sought after
 > elsewhere.
 
-# Introduction
+## Introduction
 
 Manufactures of products with digital elements (products with software) needs
 to follow due diligence when it comes to components in its supply chain.
@@ -42,7 +42,7 @@ These updates should (where applicable) be installed automatically.
 Security updates should be delivered separate from feature updates/changes.
 And there should be a clear opt-out mechanism for automatic updates.
 
-# Supply threats
+## Supply threats
 
 <abbr title="European Union Agency for Cybersecurity">ENISA</abbr> ranks
 "Supply Chain Compromise of Software Dependencies" as the nr 1 threat in their
@@ -75,14 +75,14 @@ These are just some of the stories.
 Database](https://opensourcemalware.com/) is a community effort to track
 malware spreading through open source packages.
 
-# Security controls
+## Security controls
 
 Security controls are measures or safeguards that can be used to avoid or
 minimize attacks.
 We have divided these into two categories.
 Some of them will be explored in further detail.
 
-## Development
+### Development
 
 1. Provide security training
    - Provide adequate security training to developers
@@ -101,7 +101,7 @@ Some of them will be explored in further detail.
 6. Dependencies scanning (SCA)
 7. Security testing (SAST, DAST, PenTest)
 
-## Operation
+### Operation
 
 1. Enforce network segmentation
 2. Service isolation with VMs or containers
@@ -110,7 +110,7 @@ Some of them will be explored in further detail.
 5. SIEM, XDR and SOAR
 6. Infrastructure as Code (IaC) - Terraform, CloudFormation etc
 
-# Maturing supply chain security
+## Maturing supply chain security
 
 To further mature the security guarantees of your software supply chain, we like
 to point you towards [SLSA](https://slsa.dev/) project.
