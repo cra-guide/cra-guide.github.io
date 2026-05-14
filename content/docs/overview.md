@@ -85,9 +85,17 @@ should be done.
     [VulDB](https://vuldb.com/), [Snyk](https://security.snyk.io/) etc.
     - Prepare to deliver security patches separate from new features.
 6. Before release to market
+    - Determine support period
+      - Should be however long the product is reasonably expected to last (at
+      least 5 years).
+      - Must be documented and available at time of purchase.
     - Setup procedures for vulnerability management, including reporting to
     notified body.
     - Compile technical documentation.
+      - Details of manufacture.
+      - Details of product.
+      - How to use securely.
+      - Single point of contact for reporting vulnerabilities
     - Conduct compliance assessment.
     - Issue declaration of conformity.
 
