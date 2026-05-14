@@ -13,8 +13,8 @@ The risk assessment should take into account the cybersecurity requirements in
 I](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_I).
 Pay attention to part I, point (1) and (2).
 In short, a risk assessment is required as part of the technical documentation.
-It must document that the product has been produces with a reasonable level of
-cybersecurity according to the risks.
+It must document that the product has been produced with a reasonable level of
+cybersecurity based on risk.
 If any of the requirements in Annex I have been deemed not applicable, then it
 must document the reasoning leading to the conclusion.
 
@@ -32,10 +32,13 @@ In general, for any risk, one might take one of 3 actions:
 - Reduce
 - Accept
 
-Say you have identified a risk that personal data could be leaked.
+Say you have identified a risk, that personal data could be leaked.
 The risk can be **avoided** by not processing any personal data.
-The risk might be **reduced** by encrypting the data.
-Legislation like CRA and GDPR makes it expensive to **accept** such risk.
+The risk can be **reduced** by encrypting the data.
+The risk can be **accepted** if it is low enough.
+Legislation like CRA and GDPR makes it prohibitively expensive to **accept** a
+risk without lowering it to an appropriate level, taking the users assets into
+consideration.
 
 In order to talk about managing risks, it is useful to understand a bit of
 terminology.
@@ -58,11 +61,28 @@ the formula to:
 
 _Risk = Threat × Vulnerability × Impact_
 
+The risk assessment must be tailored to the product and should take into
+consideration:
+
+- How it interfaces with the world around?
+  - Is it connected to the internet?
+  - Can it cause damage to people and objects?
+- What assets (on users end) can be impacted by a compromise and what loss can
+follow?
+- How attractive is it as a target?
+  - Who is using the product? Consumer, critical infrastructure etc.
+
+[CVSS](https://www.first.org/cvss/) scores can help determine which
+vulnerabilities to focus on.
+
+[Security testing](./supply-chain/security-testing.md) can be used to verify
+and provide evidence that mitigations are effective.
+
 ## Threat modeling
 
 Threat modeling should be performed as part of the risk assessment.
-Threat modeling is a structured approach to discover threats to a system.
-Various techniques can be used, such as
+It is a structured approach to discover threats to a system. Various techniques
+can be used, such as
 [STRIDE](<https://learn.microsoft.com/en-us/previous-versions/commerce-server/ee823878(v=cs.20)>)
 and [Attack
 Trees](https://www.schneier.com/academic/archives/1999/12/attack_trees.html).
@@ -72,7 +92,26 @@ Some good resources to get started with threat modeling are:
 - [Microsoft Learn - Threat Modeling Security Fundamentals](https://learn.microsoft.com/en-us/training/paths/tm-threat-modeling-fundamentals/)
 - [OWASP - Threat Modeling Process](https://owasp.org/www-community/Threat_Modeling_Process)
 
-# Standards
+## Reassessment
+
+The risk assessment must be updated through the products support period
+(expected lifespan).
+
+The threat landscape is continuously evolving.
+It is therefore recommended to stay up to date, by for instance reading the
+latest [ENISA - Threat
+landscape](https://www.enisa.europa.eu/publications?search_api_fulltext=Threat+landscape)
+yearly report, and cybersecurity news sites such as
+[BleepingComputer](https://www.bleepingcomputer.com/).
+
+Changes in functionality can also prompt reassessment.
+For instance when adding new capabilities to a product through a software
+update.
+
+Employ monitoring to detect new threats and update assessment accordingly.
+Monitoring should be implemented in such a way as to respect users privacy.
+
+## Standards
 
 CRA does not dictate any specific standard or methodology for the risk assessment.
 Once a harmonized standard has been developed it will be what you should look
@@ -81,3 +120,7 @@ In the meantime, manufactures might look towards existing recognized standards
 such as ISO 27005, IEC 62443
 ([source](https://www.enisa.europa.eu/sites/default/files/2024-11/Cyber%20Resilience%20Act%20Requirements%20Standards%20Mapping%20-%20final_with_identifiers_0.pdf))
 and NIST SP 800-30 ([source](https://www.secure4sme.eu/document/open?id=10)).
+
+We also recommend reading "Risk Assessment 101" in [SECURE - The CRA’s
+Essential Cybersecurity Requirements: Annex I, Part
+I](https://www.secure4sme.eu/central-repository/the-cras-essential-cybersecurity-requirements-annex-i-part-i).
