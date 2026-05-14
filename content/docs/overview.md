@@ -97,10 +97,11 @@ should be done.
       - How to use securely.
       - Single point of contact for reporting vulnerabilities
     - Conduct compliance assessment.
-    - Issue declaration of conformity (see [Annex
+    - Draw up a declaration of conformity (see [Annex
     V](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_V)
     & [Annex
     VI](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_VI)).
+    - Affix CE marking to the product.
 
 *The text above is meant to give an overview of some key points to consider.
 It is no substitute for reading obligations in CRA text.*
