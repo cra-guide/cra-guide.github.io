@@ -3,6 +3,8 @@ title = "Overview"
 weight = 1
 +++
 
+# Introduction
+
 Cyber Resilience Act also known as CRA entered into force 10 December 2024.
 It will be fully applicable by 11 December 2027.
 It encompasses all "products with digital elements" placed on the European
@@ -18,6 +20,19 @@ runs on something that is in the consumers possession is still in scope.
 So software installed on an electronic device (including computer) within the
 consumers possession is in scope.
 Software that is only accessed through a web-browser will likely be exempted.
+
+# Timeline
+
+The rollout of CRA happens in stages.
+Here is quick overview
+
+- Entry into force: 10 December 2024
+- Vulnerability reporting obligations: 11 September 2026
+- Fully applies: 11 December 2027
+  - Products with digital elements put on EU market after this day must be
+  fully compliant.
+
+# Area of focus
 
 The legislation requires obligations from various entities.
 Including:
@@ -38,7 +53,47 @@ Manufacture is defined as:
 See [Article 13 - Obligations of
 manufacturers](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#art_13)
 
-Obligations of manufacturers
+# Compliance roadmap
+
+This section aims to give a quick overview of what needs to be done to be
+compliant with CRA.
+
+1. Identify what products have digital elements (software)
+2. Determine what category each product falls into (see
+   [categories](./categories.md)), because that determines how assessment
+should be done.
+3. Conduct a gap analysis (see [gap analysis](./gap-analysis.md))
+    - What standards are already implemented, and what are the gap between that
+    and the obligations in CRA.
+4. Make a risk assessment of the product (see [risk assessment](./risk.md))
+    - Must account for how the product will likely be put to use.
+    - Must consider damages to user assets if Vulnerability in the product is
+    exploited.
+    - Should include threat modeling.
+    - Must include how security requirements of Annex I, part 1 is implemented,
+    or reason why a requirement is not applicable.
+    - Must include the application of security by design principle to archive
+    an appropriate level of cybersecurity base on risk.
+5. During development
+    - Consider security as integral part of design.
+    - Implement appropriate security controls.
+    - Configure CI/CD pipeline to generate SBOM (see [SBOM](./supply-chain/sbom.md)).
+    - Daily scan SBOM of all released versions against databases of known
+    vulnerabilities such as [CVE](https://www.cve.org/),
+    [NVD](https://nvd.nist.gov/), [EUVD](https://euvd.enisa.europa.eu/),
+    [VulDB](https://vuldb.com/), [Snyk](https://security.snyk.io/) etc.
+    - Prepare to deliver security patches separate from new features.
+6. Before release to market
+    - Setup procedures for vulnerability management, including reporting to
+    notified body.
+    - Compile technical documentation.
+    - Conduct compliance assessment.
+    - Issue declaration of conformity.
+
+*The text above is meant to give an overview of some key points to consider.
+It is no substitute for reading obligations in CRA text.*
+
+# CRA and Open Source
 
 Early proposals of the legislation was heavy criticized by the free and open
 source community.
