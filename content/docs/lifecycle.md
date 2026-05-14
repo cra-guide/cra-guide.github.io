@@ -84,6 +84,67 @@ II](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_
 have been met.
 Document how they have been met.
 
+## Production
+
+*For physical products.*
+
+Ensure security of supply chain for hardware.
+Take reasonable actions to ensure that components have not been tampered with.
+
+## Deployment
+
+**When first put on the market**.
+
+There are some procedures that need to take place when product is first put on
+market, or if significantly altered.
+Here is a quick overview, leaving out a lot of detail for brevity.
+
+- Conduct conformity assessment.
+- Draw up technical documentation.
+- Affix CE marking.
+- Draw up EU declaration of conformity.
+
+See [Annex VIII Conformity Assessment
+Procedures](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02024R2847-20241120#anx_VIII)
+for details.
+
+Technical documentation and EU declaration of conformity must be kept for at
+least 10 years or the support period, whichever is longer.
+
+**Before each release**
+
+Whenever new software is released, including security patches and functionality
+updates.
+Also when first put to market.
+
+Generate and store SBOM.
+
+Ensure there is no known exploitable vulnerabilities, including 3rd party
+components.
+SBOM and SCA are vital to ensure this requirement is met.
+
+Make sure the digital elements have not been altered in such a way, as to make
+the technical documentation invalid.
+
+Ensure default configuration is secure.
+Example: can not ship with a hard-coded default password.
+
+## Maintenance
+
+Scan SBOMs against databases of known vulnerabilities, such as
+[CVE](https://www.cve.org/), [NVD](https://nvd.nist.gov/),
+[EUVD](https://euvd.enisa.europa.eu/), [VulDB](https://vuldb.com/),
+[Snyk](https://security.snyk.io/) etc.
+
+Provide OTA (over-the-air) updates (if applicable) with security fixes through
+the support period.
+
+Monitor for new threats.
+
+## End-of-life
+
+TODO
+
 ## Additional resources
 
 - [Microsoft SDL](https://www.microsoft.com/en-us/securityengineering/sdl/practices)
