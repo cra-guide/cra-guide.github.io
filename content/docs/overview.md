@@ -65,7 +65,7 @@ should be done.
 3. Conduct a gap analysis (see [gap analysis](./gap-analysis.md))
     - What standards are already implemented, and what are the gap between that
     and the obligations in CRA.
-4. Make a risk assessment of the product (see [risk assessment](./risk.md))
+4. Make a risk assessment of the product (see [risk assessment](./risk-assessment.md))
     - Must account for how the product will likely be put to use.
     - Must consider damages to user assets if Vulnerability in the product is
     exploited.
@@ -91,13 +91,16 @@ should be done.
       - Must be documented and available at time of purchase.
     - Setup procedures for vulnerability management, including reporting to
     notified body.
-    - Compile technical documentation.
+    - Compile technical documentation (see [ANNEX VII](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_VII).
       - Details of manufacture.
       - Details of product.
       - How to use securely.
       - Single point of contact for reporting vulnerabilities
     - Conduct compliance assessment.
-    - Issue declaration of conformity.
+    - Issue declaration of conformity (see [Annex
+    V](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_V)
+    & [Annex
+    VI](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_VI)).
 
 *The text above is meant to give an overview of some key points to consider.
 It is no substitute for reading obligations in CRA text.*
