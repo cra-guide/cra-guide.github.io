@@ -80,9 +80,11 @@ should be done.
     - Conduct regular security testing (see [security testing](./supply-chain/security-testing.md))
     - Configure CI/CD pipeline to generate SBOM (see [SBOM](./supply-chain/sbom.md)).
     - Daily scan SBOM of all released versions against databases of known
-    vulnerabilities such as [CVE](https://www.cve.org/),
-    [NVD](https://nvd.nist.gov/), [EUVD](https://euvd.enisa.europa.eu/),
-    [VulDB](https://vuldb.com/), [Snyk](https://security.snyk.io/) etc.
+    vulnerabilities such as [CISA
+    KEV](https://www.cisa.gov/known-exploited-vulnerabilities-catalog),
+    [CVE](https://www.cve.org/), [NVD](https://nvd.nist.gov/),
+    [EUVD](https://euvd.enisa.europa.eu/), [VulDB](https://vuldb.com/),
+    [Snyk](https://security.snyk.io/) etc
     - Prepare to deliver security patches separate from new features.
 6. Before release to market
     - Determine support period

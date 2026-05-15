@@ -131,7 +131,8 @@ Example: can not ship with a hard-coded default password.
 
 ## Maintenance
 
-Scan SBOMs against databases of known vulnerabilities, such as
+Scan SBOMs against databases of known vulnerabilities, such as [CISA
+KEV](https://www.cisa.gov/known-exploited-vulnerabilities-catalog),
 [CVE](https://www.cve.org/), [NVD](https://nvd.nist.gov/),
 [EUVD](https://euvd.enisa.europa.eu/), [VulDB](https://vuldb.com/),
 [Snyk](https://security.snyk.io/) etc.
