@@ -68,12 +68,18 @@ These are just some of the stories.
 - [XZ Utils backdoor - 2024](https://en.wikipedia.org/wiki/XZ_Utils_backdoor)
 - [npm debug and chalk compromise - 2025](https://www.aikido.dev/blog/npm-debug-and-chalk-packages-compromised)
 - [LiteLLM PyPI backdoor - 2026](https://www.bleepingcomputer.com/news/security/popular-litellm-pypi-package-compromised-in-teampcp-supply-chain-attack/)
-- [Axios malware - 2026](https://www.bleepingcomputer.com/news/security/hackers-compromise-axios-npm-package-to-drop-cross-platform-malware/)
-- [SAP npm packages - 2026](https://www.bleepingcomputer.com/news/security/official-sap-npm-packages-compromised-to-steal-credentials/)
+- [Axios infection - 2026](https://www.bleepingcomputer.com/news/security/hackers-compromise-axios-npm-package-to-drop-cross-platform-malware/)
+- [SAP npm packages compromise - 2026](https://www.bleepingcomputer.com/news/security/official-sap-npm-packages-compromised-to-steal-credentials/)
+- [TanStack compromise - 2026](https://www.bleepingcomputer.com/news/security/shai-hulud-attack-ships-signed-malicious-tanstack-mistral-npm-packages/)
 
 [OPEN SOURCE MALWARE - Community Threat
 Database](https://opensourcemalware.com/) is a community effort to track
 malware spreading through open source packages.
+
+Many of the recent examples listed above are linked to the same group of threat
+actors known as TeamPCP.
+They are exploited vulnerabilities in how the open source ecosystem commonly
+have been operating.
 
 ## Security controls
 

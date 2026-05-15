@@ -15,14 +15,20 @@ trend](https://www.endorlabs.com/learn/npm-account-takeovers-are-a-growing-malwa
 packages on npm and other registries, it is time we start treating them as
 dangerous.
 Developers are the target for much of this.
-It is therefore becoming to use sandboxed development environments.
+
+A recent version of pnpm have implemented some [supply-chain
+protection](https://pnpm.io/blog/releases/11.0#highlights) to lower the risk of
+npm based malware infection.
+
+Another precaution to limit the impact of such attacks are to use sandboxed
+development environments.
 One solution is to use cloud development environments (CDE), such as: [GitHub
 Codespaces](https://github.com/features/codespaces), [Google Cloud
 Workstations](https://cloud.google.com/workstations) and [AWS
 Cloud9](https://aws.amazon.com/cloud9/).
 Another is to run your own virtual machine for development.
 
-Using isolated development environments are also necessary safety precaution
+Using isolated development environments are also an advised safety precaution
 for agentic coding.
 
 ## Custom virtual machine
@@ -48,5 +54,14 @@ They should be scoped to only the necessary repository.
 In addition, tokens can be created with a short expiration, though that can
 create some inconvenience.
 
+## CI/CD
+
 Developers should not be allowed to publish artifacts themselves.
 This should only be allowed from a protected CI/CD environment.
+
+Some of the aforementioned supply-chain malware spread by exploiting the CI/CD
+pipeline.
+If you or your organization is maintainer of open source packages, then it
+might be a good idea to have a security conscious person review CI/CD pipeline.
+Look for and avoid ways where untrusted code can run as part of the pipeline,
+because that could cause unauthorized exposure of access tokens.
