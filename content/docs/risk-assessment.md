@@ -111,11 +111,10 @@ update.
 Employ monitoring to detect new threats and update assessment accordingly.
 Monitoring should be implemented in such a way as to respect users privacy.
 
-## Standards
+## Risk assessment standards
 
-CRA does not dictate any specific standard or methodology for the risk assessment.
-Once a harmonized standard has been developed it will be what you should look
-towards.
+A harmonized standard that covers ensuring an appropriate level of
+cybersecurity based on the risks should be ready for adoption 30 August 2026.
 In the meantime, manufactures might look towards existing recognized standards
 such as ISO 27005, IEC 62443
 ([source](https://www.enisa.europa.eu/sites/default/files/2024-11/Cyber%20Resilience%20Act%20Requirements%20Standards%20Mapping%20-%20final_with_identifiers_0.pdf))
