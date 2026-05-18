@@ -38,7 +38,7 @@ See [threat modeling](./risk-assessment.md#threat-modeling).
 
 ## Development
 
-**Secure coding practices**
+#### Secure coding practices
 
 Developers should be familiar with and follow secure coding practices.
 Some resources are: [OWASP Developer Guide](https://devguide.owasp.org/),
@@ -46,14 +46,14 @@ Some resources are: [OWASP Developer Guide](https://devguide.owasp.org/),
 ASVS](https://owasp.org/www-project-application-security-verification-standard/),
 [NIST SSDF](https://csrc.nist.gov/Projects/ssdf).
 
-**Make inventory of approved libraries**
+#### Make inventory of approved libraries
 
 According to CRA, manufactures need to exercise due diligence when it comes to
 3rd party components in software.
 Maintaining an inventory of vetted frameworks, libraries and algorithms can
 greatly assist in this regard.
 
-**Security testing**
+#### Security testing
 
 Regularly running automated security testing tools can help catch issues early,
 without requiring significant manual work.
@@ -69,10 +69,10 @@ A list of some tools/vendors can be found
 
 Though such tools can help discover vulnerabilities, they also tend to report
 false positives.
-They also have limited ability in discovering certain classes of
-vulnerabilities such as flaws in program logic.
-In addition, manual testing should be done, such as code review and penetration
-testing.
+They also exhibit limited ability in discovering certain classes of
+vulnerabilities, such as flaws in program logic.
+It should be augmented with manual testing should be done, such as code review
+and penetration testing.
 
 ## Testing
 
@@ -80,7 +80,7 @@ Verify that appropriate mitigations and security controls have been implemented
 base on the risk assessment.
 
 Verify that each of the security requirements in [Annex
-II](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_II)
+I](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402847#anx_I)
 have been met.
 Document how they have been met.
 
@@ -93,7 +93,7 @@ Take reasonable actions to ensure that components have not been tampered with.
 
 ## Deployment
 
-**When first put on the market**.
+#### When first put on the market
 
 There are some procedures that need to take place when product is first put on
 market, or if significantly altered.
@@ -111,7 +111,7 @@ for details.
 Technical documentation and EU declaration of conformity must be kept for at
 least 10 years or the support period, whichever is longer.
 
-**Before each release**
+#### Before each release
 
 Whenever new software is released, including security patches and functionality
 updates.
@@ -137,8 +137,8 @@ KEV](https://www.cisa.gov/known-exploited-vulnerabilities-catalog),
 [EUVD](https://euvd.enisa.europa.eu/), [VulDB](https://vuldb.com/),
 [Snyk](https://security.snyk.io/) etc.
 
-Provide OTA (over-the-air) updates (if applicable) with security fixes through
-the support period.
+Provide OTA (over-the-air) updates (if applicable) with security fixes
+throughout the support period.
 
 Monitor for new threats.
 
@@ -146,6 +146,10 @@ Monitor for new threats.
 
 TODO
 
-## Additional resources
+## Methodologies
 
-- [Microsoft SDL](https://www.microsoft.com/en-us/securityengineering/sdl/practices)
+It can be an idea to look into methodologies or process models that incorporate
+security as an integral part of software development.
+Example: [Microsoft
+SDL](https://www.microsoft.com/en-us/securityengineering/sdl/practices) and
+[NIST SSDF](https://csrc.nist.gov/Projects/ssdf).

@@ -2,16 +2,16 @@
 title = "Containers"
 +++
 
-> This came about because one of the companies we collaborated with for this
-> project, were looking into using containers to provide a way to host backend
-> for their devices on premise.
+> This came about because one of the companies we collaborated with, were
+> looking into using containers to provide a way to host backend on premise for
+> the devices they manufacture.
 
 ## Technology
 
 > We are only going to consider Linux containers on this page, primarily
 > focusing on Docker, since it is the industry standard these days.
 
-To understand how to secure something you need to understand a bit about the
+To understand how to secure something, you need to understand a bit about the
 technology.
 
 Containers are often explained as a form of light-weight virtual machine (VM).
@@ -20,24 +20,26 @@ prior knowledge of virtualization), it is not the full story.
 
 ### Cgroups & namespaces
 
-What containers really are, is a combination of two features of the Linux
-kernel.
+Containers are an abstract concept rather than a concrete technology.
+In most Linux container runtimes, the concept  of a container is build on top
+of two features of the Linux kernel.
 Those are [cgroups](https://en.wikipedia.org/wiki/Cgroups) and
 [namespaces](https://en.wikipedia.org/wiki/Linux_namespaces).
-The short version is that namespaces provide isolation for processes and
+The short version is that, namespaces provide isolation for processes and
 cgroups allows limiting of resources.
-So all containers are, is just regular processes (or process trees) with
-isolation and resource control.
+With these runtimes, containers are just regular processes (or process trees)
+with isolation and resource control.
 Therefore, instead of thinking about containers as "light-weight VMs", it is
-more useful in a security context to think of them as sandboxes.
+more useful in a security context to think of them as process sandboxes.
 
-Great care should be taking when deploying containers with something like
-Docker Engine, as it is very easy to misconfigure.
+Great care should be taking when deploying containers when using something like
+Docker Engine.
+Because it is very easy to misconfigure.
 Docker is not really secure by default.
 Even with all the appropriate security measures, isolation is not as strong as
 VMs.
 In fact some cloud providers (AWS & Fly) "secretly" deploy containers to
-micro-VMs using
+micro-VMs using technologies like
 [Firecracker](https://github.com/firecracker-microvm/firecracker).
 
 ### Images
@@ -48,6 +50,7 @@ They consist of some metadata known as [Image
 Manifest](https://github.com/opencontainers/image-spec/blob/main/manifest.md)
 and a [filesystem
 changeset](https://github.com/opencontainers/image-spec/blob/main/layer.md).
+
 You have probably heard about layers in docker.
 When writing a Dockerfile, each instruction becomes a new layer when building.
 A layer is really a [tar
@@ -63,13 +66,15 @@ the content of each layer.
 
 This is important because anything added in a layer can always be extracted
 from an image, even if the file was removed in another layer.
-It might be tempting to add secrets (encryption keys etc) in a layer, but you
-should know that they will then be distributed as part of the images.
+It might be tempting to add secrets (encryption keys etc) in a layer, but then
+they will then be distributed as part of the images.
 It is therefore strongly discouraged to reference secrets in Dockerfiles.
 
-Good security requires defense in depth, that is multiple layers of defenses
-working in depth.
-When deploying with containers it is of cause important to secure the application.
+Good security requires defense in depth.
+Meaning to have multiple layers of defenses.
+When deploying with containers it certainly important to secure the application
+using best practices for coding and software development.
+Another layer of defense is securing the container images itself.
 The <abbr title="potential scope of damage">blast radius</abbr> should be kept
 as small as possible in case a container gets compromised.
 Care should be taken not to leak secrets by accidentally baking them into
@@ -81,13 +86,13 @@ container images.
 
 Using something familiar (Ubuntu, Debian etc) as base image for containers is
 tempting.
-It has been the recommendation for a while now, to use smaller such as Alpine
-for base image.
+It has been the recommendation for a while now, to use smaller base-images such
+as Alpine.
 Even though the Alpine image is small, it still contains plenty of tools that
-attackers to do damage.
-There is a [busybox](https://en.wikipedia.org/wiki/BusyBox) including `nc` (aka
-[netcat](https://en.wikipedia.org/wiki/Netcat)) commonly used by attackers to
-create a backdoor.
+attackers use to do further damage after a compromise.
+For instance, it has a [busybox](https://en.wikipedia.org/wiki/BusyBox)
+including `nc` (aka [netcat](https://en.wikipedia.org/wiki/Netcat)), which are
+commonly used by attackers to create a backdoors or pivot their attack.
 They can also just install whatever tool they want with `apk`.
 
 Using a base image with lots of tools that makes it convenient for debugging,
@@ -98,54 +103,57 @@ to run it.
 It is therefore recommended to use [multi-stage
 build](https://docs.docker.com/build/building/multi-stage/).
 
-A [distroless](https://docs.docker.com/dhi/core-concepts/distroless/) image
-should be used for the final build.
+A [distroless](https://docs.docker.com/dhi/core-concepts/distroless/)
+base-image should be used for the final build.
 Distroless images don't have debugging tools, package managers, shells and
-other common tools.
-Using a distroless base image for the final container image, severely limits an
+other such utilities.
+Using a distroless base image for the final container image, will limit an
 attackers' ability to do [lateral
-movement](https://www.cloudflare.com/learning/security/glossary/what-is-lateral-movement/).
+movement](https://www.cloudflare.com/learning/security/glossary/what-is-lateral-movement/)
+after compromising the container.
 
 ### Attestation
 
 Attestation provides proof of how an image was built and what's in it.
 Adding attestation as part of the image build process, allows verification that
-the images is what is claimed and haven't been tampered when deployed.
+the images is what is claimed, and have not been tampered with.
 
 There are two types of attestation.
 
-1. **Provenance attestation** record facts about the build process such as,
-   when the image was built and how it was produced.
-   [Read more](https://docs.docker.com/build/metadata/attestations/slsa-provenance/)
+1. **Provenance attestation:** record facts about the build process, such as
+   when the image was built and how it was produced. See [Docker Docs
+Provenance
+attestations](https://docs.docker.com/build/metadata/attestations/slsa-provenance/).
 
-2. **SBOM attestation** contains a list of software components/artifacts inside
-   the container.
-   An SBOM can be used to scan for known vulnerabilities.
-   [Read more](https://docs.docker.com/build/metadata/attestations/sbom/)
+2. **SBOM attestation:** contains a list of software components/artifacts
+   inside the container.
+   An SBOM can be used to scan for known vulnerabilities. See [Docker Docs SBOM
+attestations](https://docs.docker.com/build/metadata/attestations/sbom/).
 
 The authenticity and integrity of images and attestation can be proved with
 [signatures](https://docs.docker.com/dhi/core-concepts/signatures/).
 
-Images should be built with attestation and signed using
+Images should be built with attestation and signed using for example
 [cosign](https://docs.sigstore.dev/) in as part of CI pipeline.
 
 ### Scanning
 
-There are a number of tools that can do vulnerability scanning for containers.
+There are a number of tools that can do vulnerability scanning on container
+images.
 The official solution for Docker is [Docker
 Scout](https://docs.docker.com/scout/) (requires subscription).
-Two other options we've come a cross a lot are:
+Some other options we've come across a lot are:
 [Trivy](https://github.com/aquasecurity/trivy),
 [Grype](https://github.com/anchore/grype) and
 [Snyk](https://docs.snyk.io/developer-tools/snyk-ci-cd-integrations/github-actions-for-snyk-setup-and-checking-for-vulnerabilities/snyk-docker-action).
 
-There are many other tools/vendors that act in this area. They vary in the
-capabilities.
-So it is advisable to do some research.
-Some of the features container scanning tools might provide is:
+There are many other tools and vendors that act in this area.
+They can vary in the capabilities.
+It is therefore advisable to do some research.
+Some of the features that container scanning tools commonly provide are:
 
 - Scan image for known vulnerability
-- Detect some misconfiguration
+- Detect (some) misconfiguration
 - Find secrets baked into images
 - Software license compliance
 
@@ -155,20 +163,20 @@ It might be a good place to start to get familiar with these kinds of tools.
 Though it is worth noting that [Trivy has been involved in a couple of security
 incidents](https://thehackernews.com/2026/03/trivy-security-scanner-github-actions.html).
 
-See also [Security Testing](security-testing.md).
+See our page on [security testing](./security-testing.md).
 
 ## Runtime hardening
 
 ### Non-root user
 
-By default, Docker run commands inside containers as root.
-It is therefore advisable to specify another user when running containers.
+By default, Docker run commands inside a container as root.
+It is advisable to specify another user when running containers.
 There are a couple of different ways this can be done.
 
 1. When running a container, you can specify a UID with `-u` options.
    Example: `docker run -u 4000 alpine`.
-2. When writing a Dockerfile, a non-root should be specified with the [USER
-   instruction](https://docs.docker.com/reference/dockerfile/#user).
+2. When writing a Dockerfile, a non-root user should be specified with the
+   [USER instruction](https://docs.docker.com/reference/dockerfile/#user).
 3. By enabling [User namespace
    remapping](https://docs.docker.com/engine/security/userns-remap/#enable-userns-remap-on-the-daemon)
    on Docker daemon.
@@ -180,15 +188,15 @@ There are a couple of different ways this can be done.
 
 Availability is an important security goal.
 In addition to preventing access to unauthorized users, it is just as important
-that authorized users can access the service.
+to ensure access for authorized users.
 
 For any long-lived process, there is a chance that at some point, it will
 become unresponsive.
-The first step for solving this issue for containers, is to be able to detect
-that a container has become "unhealthy".
+The first step for solving this issue for a container, is to be able to detect
+when the container has become "unhealthy".
 Unhealthy - meaning that the container has stopped responding to requests.
 This is done with healthcheck/liveness probes.
-The common strategy for dealing with these issues, is simply to restart the
+A common strategy for dealing with these issues, is simply to restart the
 container when it stops responding.
 
 How health check/liveness probes are declared, depends a bit on how you run the
@@ -204,44 +212,44 @@ attribute](https://docs.docker.com/reference/compose-file/services/#healthcheck)
 in Compose file.
 
 It is important that you carefully consider how to implement the health check,
-as you don't want it to become an attack vector. Healthchecks in Docker runs a
-command (often `curl`) inside the container. Including `curl`, `nc` etc. in
-your service container image, also provides a tool that can be abused by
-attackers.
+as you don't want it to become an attack vector it it self.
+Healthchecks in Docker runs a command (often `curl`) inside the container.
+Including `curl`, `nc` etc in a container image also provides a tool that can
+be abused by attackers.
 
 For **Kubernetes**, use the [liveness
 command](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/).
 
 ### Monitoring
 
-There are a plethora of monitoring services such as:
+There is a plethora of monitoring services such as:
 [Middleware](https://middleware.io/product/container-monitoring/),
 [sematext](https://sematext.com/), [datadog](https://www.datadoghq.com/),
 [Splunk](https://www.splunk.com/) etc.
 However, these can be pricey.
 
 For a self-hosted monitoring solution, you can use
-[Prometheus](https://prometheus.io/) plus either
+[Prometheus](https://prometheus.io/), plus either
 [Grafana](https://grafana.com/) or [Perses](https://perses.dev/).
 
 Support for observability beyond simple healthcheck probes can be added by
-implementing [OpenTelemetry standard](https://opentelemetry.io/).
+implementing the [OpenTelemetry standard](https://opentelemetry.io/).
 It is important though, that you very carefully read the [documentation on
-security](https://opentelemetry.io/docs/security/), as it can otherwise leave
-new attack vectors open and break regulatory compliance such as GDPR.
+security](https://opentelemetry.io/docs/security/).
+Because otherwise it can provide new attack vectors and break GDPR compliance.
 
 ### Secrets
 
 It is important to be aware that any secrets set with `ENV` or `ARG` in a
 Dockerfile will persist in the final image.
-So setting secrets that way is strongly discouraged.
+Setting secrets that way is strongly discouraged.
 
 Using secrets with Docker is done via mounts.
 See [Build secrets](https://docs.docker.com/build/building/secrets/) and
 [Secrets in Compose](https://docs.docker.com/compose/how-tos/use-secrets/).
 
 Use a scanning tool to check for secrets in your images.
-See [Scanning](#scanning).
+See [Scanning](#scanning) section above.
 
 Cloud providers generally provide their own way of managing secrets for
 containers.
@@ -249,30 +257,33 @@ See the documentation for your provider for details.
 
 ### Secure Computing (seccomp)
 
-Docker integrates with seccomp, which is a feature of the Linux kernel,
-restricting which system calls can be made by a process/container.
+Docker integrates with seccomp.
+Which is a feature of the Linux kernel restricting which system calls can be
+made by a process (or container).
 See [Seccomp security profiles for
 Docker](https://docs.docker.com/engine/security/seccomp/).
 
 ### Alternative container runtime
 
-By default, Docker uses containerd which uses runc as container runtime.
+By default, Docker uses containerd which uses runc as the container runtime.
 It uses the standard Linux features of cgroups and namespaces to facilitate
 containers.
 
 Depending on deployment scenario it can be beneficial to change the default
 runtime to provide additional isolation for containers.
-Some alternatives are: [kata](https://katacontainers.io/),
-[gvisor](https://github.com/google/gvisor) and
-[krun](https://github.com/containers/libkrun).
+Some alternatives are:
+
+- [kata](https://katacontainers.io/),
+- [gvisor](https://github.com/google/gvisor)
+- [krun](https://github.com/containers/libkrun)
 
 See [Alternative container
 runtimes](https://docs.docker.com/engine/daemon/alternative-runtimes).
 
 ## Further reading
 
-Be sure carefully read the official
-[dockerdocs](https://docs.docker.com/manuals/) as security advice is scattered
+Be sure carefully read the official [Docker
+Docs](https://docs.docker.com/manuals/) as security advice is scattered
 throughout.
 Pay special attention to the [Docker Engine
 Security](https://docs.docker.com/engine/security/) section.

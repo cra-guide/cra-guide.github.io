@@ -94,14 +94,14 @@ Some good resources to get started with threat modeling are:
 
 ## Reassessment
 
-The risk assessment must be updated through the products support period
+The risk assessment must be updated throughout the products support period
 (expected lifespan).
 
 The threat landscape is continuously evolving.
 It is therefore recommended to stay up to date, by for instance reading the
-latest [ENISA - Threat
+latest yearly [ENISA - Threat
 landscape](https://www.enisa.europa.eu/publications?search_api_fulltext=Threat+landscape)
-yearly report, and cybersecurity news sites such as
+report, and cybersecurity news sites such as
 [BleepingComputer](https://www.bleepingcomputer.com/).
 
 Changes in functionality can also prompt reassessment.

@@ -7,29 +7,27 @@ weight = 1
 
 Cyber Resilience Act also known as CRA entered into force 10 December 2024.
 It will be fully applicable by 11 December 2027.
-It encompasses all "products with digital elements" placed on the European
-market.
-Where "product with digital elements" should be interpreted as all products
-that include software in any way.
-Whether the product it is software or hardware.
+It encompasses all "products with digital elements" placed on the
+European market.
+Where "product with digital elements" (also known as PDE) should be interpreted
+as all products that include software in any way.
+Whether the product itself is software or hardware including software.
 Something that is purely <abbr title="Software as a Service">SaaS</abbr> is
 excluded.
 Because the legislation is about products, not services.
-Something that is monetized as SaaS, but have a software component to it that
-runs on something that is in the consumers possession is still in scope.
-So software installed on an electronic device (including computer) within the
-consumers possession is in scope.
+Services that are monetized as SaaS, but have a software that runs on something
+that is in the user is in possession of, is still in scope.
 Software that is only accessed through a web-browser will likely be exempted.
 
 # Timeline
 
 The rollout of CRA happens in stages.
-Here is quick overview
+Here is quick overview:
 
 - Entry into force: 10 December 2024
 - Vulnerability reporting obligations: 11 September 2026
 - Fully applies: 11 December 2027
-  - Products with digital elements put on EU market after this day must be
+  - Products with digital elements put on EU market after this date must be
   fully compliant.
 
 # Area of focus
@@ -60,9 +58,9 @@ compliant with CRA.
 
 1. Identify what products have digital elements (software)
 2. Determine what category each product falls into (see
-   [categories](./product-categories.md)), because that determines how assessment
-should be done.
-3. Conduct a gap analysis (see [gap analysis](./gap-analysis.md))
+   [categories](./product-categories.md)), because that determines how
+assessment can be done.
+3. Conduct a gap analysis (see [existing standards](./standards.md#existing-standards))
     - What standards are already implemented, and what are the gap between that
     and the obligations in CRA.
 4. Make a risk assessment of the product (see [risk assessment](./risk-assessment.md))
@@ -80,11 +78,7 @@ should be done.
     - Conduct regular security testing (see [security testing](./supply-chain/security-testing.md))
     - Configure CI/CD pipeline to generate SBOM (see [SBOM](./supply-chain/sbom.md)).
     - Daily scan SBOM of all released versions against databases of known
-    vulnerabilities such as [CISA
-    KEV](https://www.cisa.gov/known-exploited-vulnerabilities-catalog),
-    [CVE](https://www.cve.org/), [NVD](https://nvd.nist.gov/),
-    [EUVD](https://euvd.enisa.europa.eu/), [VulDB](https://vuldb.com/),
-    [Snyk](https://security.snyk.io/) etc
+    vulnerabilities.
     - Prepare to deliver security patches separate from new features.
 6. Before release to market
     - Determine support period
@@ -106,7 +100,7 @@ should be done.
     - Affix CE marking to the product.
 
 *The text above is meant to give an overview of some key points to consider.
-It is no substitute for reading obligations in CRA text.*
+It is no substitute for reading obligations in CRA legislative text.*
 
 # CRA and Open Source
 
@@ -127,3 +121,4 @@ then you become responsible for baseline security of those components.
 The CRA legislation suggest the development of harmonized standards which can
 streamline and unify manufacture conformity.
 However, as of writing, such harmonized standards haven't been published yet.
+See [standards](./standards.md).
