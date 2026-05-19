@@ -24,7 +24,7 @@ List of what parts have been completed and what is expected to come later.
 - [ ] Software supply chain
   - [x] Containers
   - [x] Development environment
-  - [ ] Software Bill of Materials
+  - [x] Software Bill of Materials
   - [ ] Security Testing
 
 # Methodology
