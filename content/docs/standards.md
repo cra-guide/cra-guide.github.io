@@ -37,6 +37,11 @@ We found:
 
 Source [FAQs on the Cyber Resilience Act](https://ec.europa.eu/newsroom/dae/redirection/document/122331).
 
+Horizontal standards provided by EN 40000 series are in draft state.
+See [The EN 40000 series
+explained](https://cyber-regulation.com/article/en-40000-series-explained) for
+an overview.
+
 ## Existing standards
 
 Manufactures already following existing recognized standards, can perform a gap
