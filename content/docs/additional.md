@@ -11,3 +11,4 @@ weight = 99
 - [SECURE Cyber Resilience for SMEs](https://www.secure4sme.eu/)
 - [Open Regulatory Compliance - CRA Resources](https://orcwg.org/cra/resources/)
 - [EU Cyber Resilience Act Guide](https://www.eucyberresilience.com/)
+- [CONFIRMATE project](https://confirmate-project.eu/)
