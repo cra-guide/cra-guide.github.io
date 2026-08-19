@@ -21,11 +21,11 @@ List of what parts have been completed and what is expected to come later.
 - [ ] Vulnerability management
 - [x] Technical documentation
 - [ ] Cybersecurity requirements
-- [ ] Software supply chain
+- [s] Software supply chain
   - [x] Containers
   - [x] Development environment
   - [x] Software Bill of Materials
-  - [ ] Security Testing
+  - [x] Security Testing
 
 # Methodology
 
