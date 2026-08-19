@@ -19,7 +19,7 @@ List of what parts have been completed and what is expected to come later.
 - [x] Risk assessment
 - [x] Lifecycle
 - [ ] Vulnerability management
-- [ ] Technical documentation
+- [x] Technical documentation
 - [ ] Cybersecurity requirements
 - [ ] Software supply chain
   - [x] Containers
