@@ -3,6 +3,8 @@ title = "Product categories"
 weight = 3
 +++
 
+<!-- TODO does "placed on the market" mean apply to new product design or units? -->
+
 Most products with digital elements are expected to undergo internal conformity
 assessment by the manufacture.
 These are sometimes referred to as the "default category".
