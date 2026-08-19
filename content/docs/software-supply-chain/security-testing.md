@@ -33,14 +33,15 @@ branch.
 # Static application security testing (SAST)
 
 SAST tools can detect vulnerabilities in source code through static analysis.
-Traditional SAST used a combination of pattern, rules and analysis of abstract
+Traditional SAST uses a combination of pattern, rules and analysis of abstract
 syntax tree (AST).
-Many modern SAST tools also utilizing LLMs to detect issues that are hard to
-write patterns for and to better explain findings.
+Many modern SAST tools also utilize LLMs, to detect issues that are hard to
+write patterns for, and to better explain findings.
 
 SAST can be executed from CLI, build into CI/CD and integrated into the IDE
-through plugins.
-IDE integration provides real-time feedback as the code is being written.
+with plugins.
+IDE integration provides (near) real-time feedback as the code is being
+written.
 
 SAST is good at detecting potential issues early in the software development
 life cycle (SDLC), where they are cheaper to fix.
@@ -55,7 +56,7 @@ Tools](https://owasp.org/www-community/Source_Code_Analysis_Tools).
 
 DAST tools can detect potential vulnerabilities in running applications.
 This category of security testing tools are commonly used for web applications.
-DAST is a good supplement SAST.
+DAST is a good supplement to SAST.
 They allow for more frequent testing than manual penetration testing.
 
 We recommend running a SAST tool on release to staging/pre-production.
@@ -73,15 +74,15 @@ If for example you develop products based on embedded Linux, it can be an idea
 to run such a scanner against the device on regular interval (monthly,
 quarterly or yearly).
 
-Well known examples of such tools are [Tenable
+Well known examples of vulnerabilities scanners are [Tenable
 Nessus](https://www.tenable.com/products/nessus) and [OPENVAS by
 Greenbone](https://openvas.org/).
 
 # Secret scanning
 
 Secrets such as default passwords, API tokens, encryption keys etc. often end
-up source repositories and build artifacts such as binaries or container
-images.
+up source repositories and build artifacts (including binaries and container
+images).
 A category of tools commonly known as secret scanners can help avoid accidental
 disclosure of secrets.
 These tools can also assist in fulfilling the requirement of secure by default
@@ -94,7 +95,7 @@ Such tools should be used in combination with rigors manual review.
 # Penetration testing
 
 Penetration testing (pentest for short) is the most realistic form of security
-testing, as it aims to attack the product the same way as a real threat actor.
+testing, as it aims to attack the product the same way a real threat actor might.
 
 A pentest is conducted by a skilled professional.
 Often as a consultant from a specialized pentest company.
@@ -102,30 +103,30 @@ Even if two pentesters follow same methodology, the result will depend on the
 skill and creativity of the individual penters.
 A pentest can only show the presence of vulnerabilities, not the absence.
 
-Conducting a pentest can be expansive compared to more automated forms of
-security testing.
+Conducting a pentest is expensive compared to more automated forms of security
+testing.
 It is therefore not feasible for most SMEs to conduct a pentest on their
-product very often.
+products very often.
 
 A pentest can be used increase assurance that a product lives up to security
-requirements before being put on market, and with major modification to design
-of existing product.
+requirements before being put on market, or major modification to design of
+existing product.
 Whether a pentest is necessary depends on the risk profile of product
 ([category](../product-categories.md) and [risk
 assessment](../risk-assessment.md)).
 It is best used in addition to other kinds of security testing, as a pentest
 only makes sense late in the development life cycle.
 Please beware that it is important that enough time is given to the pentester
-and fixing potential issues, before launching the product.
+and to developers fixing potential issues, before launching the product.
 
 # Word of caution
 
 Running any form of security testing against a live production OT environment
 comes with a significant risk.
-The unusual traffic patterns such testing generates can crash devices affecting
-available of the production line.
-Or worse, resulting in misbehavior violating safety, thereby causing risk of
-damage to material or personal.
+The unusual traffic patterns testing creates can crash devices, thereby
+affecting available of the production line.
+Or worse, resulting in misbehavior causing violating safety, thereby resulting
+in risk of damage to personal and/or material.
 
 # Vendors and products
 
