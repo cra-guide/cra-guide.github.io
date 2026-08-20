@@ -12,3 +12,4 @@ weight = 99
 - [Open Regulatory Compliance - CRA Resources](https://orcwg.org/cra/resources/)
 - [EU Cyber Resilience Act Guide](https://www.eucyberresilience.com/)
 - [CONFIRMATE project](https://confirmate-project.eu/)
+- [Secure-by-Design Handbook](https://www.securebydesignhandbook.com/)
